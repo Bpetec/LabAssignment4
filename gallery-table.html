@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assignment 4</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            position: relative
+        }
+
+        body,
+        html {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .box-shadow {
+            -webkit-box-shadow: -1px 7px 23px -10px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: -1px 7px 23px -10px rgba(0, 0, 0, 0.75);
+            box-shadow: -1px 7px 23px -10px rgba(0, 0, 0, 0.75);
+        }
+
+        .main-container-grid {
+            display: grid;
+            grid-template-rows: 1fr 13fr 1fr;
+            height: 100%;
+            grid-row-gap: 1em;
+            background-color: #DADED4;
+        }
+
+        .r1,
+        .r3 {
+            display: grid;
+            padding: 1em;
+            align-items: center;
+            background-color: #39603D;
+        }
+
+        .r3 {
+            text-align: center;
+            /* justify is aligning vertically, align does horizontally */
+        }
+
+        .r2 {
+            height: 100%;
+            background-color: #f1f1f1;
+        }
+
+        .three-column {
+            display: grid;
+            grid-template-columns: 2fr 8fr 3fr;
+            /* fr refers to the size */
+            background-color: #DADED4;
+            grid-column-gap: 1em;
+        }
+
+        .c1 {
+            min-width: 200px;
+        }
+
+        .c1,
+        .c3 {
+            background-color: #A3BCB6;
+        }
+
+        .txt-center {
+            text-align: center;
+            margin: 15px auto 0px;
+            border-bottom: 1px solid #39603D;
+            padding-bottom: 15px;
+            /* padding is space inside border */
+        }
+
+        .left-nav {
+            list-style-type: none;
+        }
+
+        .left-nav>li>a {
+            display: block;
+            /* anchor tag by default is not a block level element */
+            padding: 15px 0px 15px 30px;
+            /* top, right, bottom, left (it goes clockwise) */
+            background-color: #A3BCB6;
+            font-weight: bold;
+            text-decoration: none;
+            transition-duration: .7s;
+        }
+
+        .left-nav>li>a:hover {
+            background-color: lightsteelblue;
+        }
+
+        .c2 {
+            /* display: grid; */
+            /* grid-template-columns: repeat(4, 1fr); */
+            /* grid-template-rows: 1fr 1fr 1fr; */
+            /* grid-auto-rows: min-content; */
+            /* grid-column-gap: 1em; */
+        }
+
+        .c2-first-row {
+            /* grid-column: 1 / 5; */
+        }
+
+        .grid-button {
+            padding: 6px 12px;
+            background-color: #CCC;
+            float: right;
+        }
+
+        .h2-content {
+            grid-column: 1 / 5;
+            /* start at 1 end at 5 */
+            height: 21px;
+            width: 150px;
+        }
+
+        .c2>img {
+            width: 100%;
+            object-fit: cover;
+            align-self: center;
+            max-height: 100px
+        }
+
+        .gallery-table {
+            display: table;
+            width: 100%;
+        }
+
+        .gallery-table>td {
+            border: 1px solid #f1f1f1;
+        }
+
+        .gallery-table>thead {
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #CCC;
+        }
+
+        .gallery-table>tbody>tr>td>img {
+            max-width: 150px;
+        }
+
+        .buy-now {
+            padding: 7px 16px;
+            background-color: burlywood;
+            float: right;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            transition-duration: .5;
+        }
+
+        .buy-now:hover {
+            background-color: #e09b41;
+        }
+    </style>
+</head>
+
+<body class="main-container-grid">
+
+    <div class="r1 box-shadow">
+        <h2>Brandon Peterson</h2>
+    </div>
+    <div class="r2 three-column">
+        <div class="c1 box-shadow">
+            <h2 class="txt-center">Navigation</h2>
+            <ul class="left-nav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact-us.html">Contact</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </div>
+        <div class="c2">
+            <div class="c2-first-row">
+                <a href="./gallery.html" class="grid-button">Gallery View</a>
+                <h2 class="txt-center h2-content">Grid View</h2>
+            </div>
+            <table class="gallery-table">
+                <thead>
+                    <tr>
+                        <td>
+                            Image
+                        </td>
+                        <td>
+                            Description
+                        </td>
+                        <td>
+                            Price
+                        </td>
+                        <td>
+                            Buy Now
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img class="box-shadow" src="./img/1.jfif">
+                        </td>
+                        <td>
+                            Corgi
+                        </td>
+                        <td>
+                            $2000
+                        </td>
+                        <td>
+                            <button class="buy-now">Buy Now</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="box-shadow" src="./img/2.jfif">
+                        </td>
+                        <td>
+                            Corgi
+                        </td>
+                        <td>
+                            $2000
+                        </td>
+                        <td>
+                            <button class="buy-now">Buy Now</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="box-shadow" src="./img/3.jfif">
+                        </td>
+                        <td>
+                            Corgi
+                        </td>
+                        <td>
+                            $2000
+                        </td>
+                        <td>
+                            <button class="buy-now">Buy Now</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="box-shadow" src="./img/4.jfif">
+                        </td>
+                        <td>
+                            Corgi
+                        </td>
+                        <td>
+                            $2000
+                        </td>
+                        <td>
+                            <button class="buy-now">Buy Now</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="box-shadow" src="./img/5.jfif">
+                        </td>
+                        <td>
+                            Corgi
+                        </td>
+                        <td>
+                            $2000
+                        </td>
+                        <td>
+                            <button class="buy-now">Buy Now</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="box-shadow" src="./img/6.jfif">
+                        </td>
+                        <td>
+                            Corgi
+                        </td>
+                        <td>
+                            $2000
+                        </td>
+                        <td>
+                            <button class="buy-now">Buy Now</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="box-shadow" src="./img/7.jfif">
+                        </td>
+                        <td>
+                            Corgi
+                        </td>
+                        <td>
+                            $2000
+                        </td>
+                        <td>
+                            <button class="buy-now">Buy Now</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="box-shadow" src="./img/8.jfif">
+                        </td>
+                        <td>
+                            Corgi
+                        </td>
+                        <td>
+                            $2000
+                        </td>
+                        <td>
+                            <button class="buy-now">Buy Now</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="box-shadow" src="./img/9.jfif">
+                        </td>
+                        <td>
+                            Corgi
+                        </td>
+                        <td>
+                            $2000
+                        </td>
+                        <td>
+                            <button class="buy-now">Buy Now</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="box-shadow" src="./img/10.jfif">
+                        </td>
+                        <td>
+                            Corgi
+                        </td>
+                        <td>
+                            $2000
+                        </td>
+                        <td>
+                            <button class="buy-now">Buy Now</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="box-shadow" src="./img/11.jfif">
+                        </td>
+                        <td>
+                            Corgi
+                        </td>
+                        <td>
+                            $2000
+                        </td>
+                        <td>
+                            <button class="buy-now">Buy Now</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="box-shadow" src="./img/12.jfif">
+                        </td>
+                        <td>
+                            Corgi
+                        </td>
+                        <td>
+                            $2000
+                        </td>
+                        <td>
+                            <button class="buy-now">Buy Now</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <img class="box-shadow" src="./img/1.jfif">
+            <img class="box-shadow" src="./img/2.jfif">
+            <img class="box-shadow" src="./img/3.jfif">
+            <img class="box-shadow" src="./img/4.jfif">
+            <img class="box-shadow" src="./img/5.jfif">
+            <img class="box-shadow" src="./img/6.jfif">
+            <img class="box-shadow" src="./img/7.jfif">
+            <img class="box-shadow" src="./img/8.jfif">
+            <img class="box-shadow" src="./img/9.jfif">
+            <img class="box-shadow" src="./img/10.jfif">
+            <img class="box-shadow" src="./img/11.jfif">
+            <img class="box-shadow" src="./img/12.jfif"> -->
+        </div>
+        <div class="c3 box-shadow">
+            <h2 class="txt-center">Gallery</h2>
+        </div>
+    </div>
+    <div class="r3">
+        Copyright 2020 - Created by Brandon Peterson
+    </div>
+</body>
+
+</html>

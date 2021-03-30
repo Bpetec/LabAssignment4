@@ -105,6 +105,14 @@
             grid-column-gap: 1em;
         }
 
+        .c2-first-row {
+            grid-column: 1 / 5;
+        }
+        .grid-button {
+            padding: 6px 12px;
+            background-color: #CCC;
+            float: right;
+        }
         .h2-content {
             grid-column: 1 / 5;
             /* start at 1 end at 5 */
@@ -134,13 +142,14 @@
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./contact-us.html">Contact</a></li>
                 <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="#">Link 5</a></li>
-                <li><a href="#">Link 6</a></li>
                 <li><a href="./login.html">Login</a></li>
             </ul>
         </div>
         <div class="c2">
-            <!-- <h2 class="txt-center h2-content">Recent product</h2> -->
+            <div class="c2-first-row">
+                <a href="./gallery-table.html" class="grid-button">Grid View</a>
+                <h2 class="txt-center h2-content">Gallery</h2>
+            </div>
             <img class="box-shadow" src="./img/1.jfif">
             <img class="box-shadow" src="./img/2.jfif">
             <img class="box-shadow" src="./img/3.jfif">
@@ -155,7 +164,7 @@
             <img class="box-shadow" src="./img/12.jfif">
         </div>
         <div class="c3 box-shadow">
-            <h2 class="txt-center">Recent product</h2>
+            <h2 class="txt-center">Gallery</h2>
         </div>
     </div>
     <div class="r3">
